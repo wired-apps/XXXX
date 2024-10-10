@@ -2405,9 +2405,9 @@
           }  
           
       </style>
-	   <script type="module">
-		   import confetti from 'https://cdn.skypack.dev/canvas-confetti';
-		    var ref = window.location.search;
+     <script type="module">
+       import confetti from 'https://cdn.skypack.dev/canvas-confetti';
+        var ref = window.location.search;
         if(!ref.includes('#receipt'))
         {
           ref = ref + '#receipt';
@@ -2418,7 +2418,7 @@
         var ref_obj = atob(decodeURIComponent(query_string[1]));
         ref_obj = JSON.parse(ref_obj);
         console.log(ref_obj);
-		   if(ref_obj.paymentResponse.includes('Payment was setup') || ref_obj.paymentResponse.includes('Payment successful'))
+       if(ref_obj.paymentResponse.includes('Payment was setup') || ref_obj.paymentResponse.includes('Payment successful'))
           {
             //If Success
             if(ref_obj.chargeType == "OneTime"){
@@ -2451,13 +2451,13 @@
             else{
               document.getElementById("message").innerHTML = "Oops!";
               document.getElementById("retryBtn").style.display = "flex";
-              ref_obj.retryURL = 'https://wired-apps.github.io/demo/earthquake-appeal/';
+              ref_obj.retryURL = 'https://wired-apps.github.io/GlueScratchOrg/earthquake-appeal/';
             }
           }
-	   </script>
+     </script>
       <script>
         function retryDonation(){
-		var ref = window.location.search;
+    var ref = window.location.search;
         if(!ref.includes('#receipt'))
         {
           ref = ref + '#receipt';
